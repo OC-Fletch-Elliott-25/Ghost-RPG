@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://cr08stvq8fdc1"]
+
+[ext_resource type="Script" uid="uid://cycqkvibp5qv5" path="res://Scripts/battle_2.gd" id="1_kc3te"]
+[ext_resource type="Texture2D" uid="uid://c1e28s4g0qjro" path="res://Assets/Background_Main_Menu.png" id="2_wgfp6"]
+[ext_resource type="Texture2D" uid="uid://swcuvfrnpb07" path="res://Assets/Skeleton.png" id="3_wmelu"]
+
+[node name="Battle_1" type="Control" unique_id=1118843933]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kc3te")
+metadata/_edit_horizontal_guides_ = [-11.0]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=304450917]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 5.0
+offset_right = 1169.0
+offset_bottom = 650.0
+texture = ExtResource("2_wgfp6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=465374120]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.172
+anchor_bottom = 0.864
+offset_left = 8.0
+offset_top = 422.0
+offset_right = 171.85599
+offset_bottom = 92.12799
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1761925588]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=579168309]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=476145379]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Attack_1_Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=905446453]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Attack"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=319888379]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Item_1_Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1982289506]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Energy Drink"
+
+[node name="Item_2_Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=878141285]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Lucky Trinket"
+
+[node name="Defend_Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=627152576]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Defend"
+
+[node name="Health_Bar" type="ProgressBar" parent="HBoxContainer/VBoxContainer" unique_id=1919865552]
+layout_mode = 2
+
+[node name="Damage_Label" type="Label" parent="HBoxContainer" unique_id=403861877]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1991351447]
+layout_mode = 0
+offset_left = 754.0
+offset_top = 12.0
+offset_right = 1123.0
+offset_bottom = 88.0
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer" unique_id=632832109]
+position = Vector2(162, 130)
+scale = Vector2(3, 3)
+texture = ExtResource("3_wmelu")
+
+[node name="Enemy_health_Bar" type="ProgressBar" parent="VBoxContainer" unique_id=499336000]
+layout_mode = 2
+
+[node name="Enemy_Damage_Label" type="Label" parent="VBoxContainer" unique_id=836195919]
+layout_mode = 2
+
+[node name="Player_Attack_Label" type="Label" parent="." unique_id=1740493536]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.293
+anchor_top = 0.59900004
+anchor_right = 0.41300002
+anchor_bottom = 0.634
+offset_left = -16.53601
+offset_top = -13.152039
+offset_right = 7.2239685
+offset_bottom = 8.167999
+
+[node name="Enemy_Attack_Label" type="Label" parent="." unique_id=288490339]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.44000003
+anchor_top = 0.171
+anchor_right = 0.56
+anchor_bottom = 0.20700002
+offset_left = 255.11996
+offset_top = 102.192
+offset_right = 254.88
+offset_bottom = 101.86398
+
+[node name="Enemy_Speech_Bubble" type="Label" parent="." unique_id=1576896849]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.44000003
+anchor_top = 0.171
+anchor_right = 0.56
+anchor_bottom = 0.20700002
+offset_left = 195.11996
+offset_top = -44.808
+offset_right = 194.88
+offset_bottom = -45.136017
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1663717263]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.108
+anchor_bottom = 0.23400001
+offset_left = 403.0
+offset_top = 224.0
+offset_right = 627.584
+offset_bottom = 220.368
+
+[node name="Tutorial?" type="Label" parent="VBoxContainer2" unique_id=250675323]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2" unique_id=1194280625]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Yes_Tutorial" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=1515470464]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Yes"
+
+[node name="No_Tutorial" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=103101670]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "No"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Attack_1_Button" to="." method="_on_attack_1_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Item_1_Button" to="." method="_on_item_1_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Item_2_Button" to="." method="_on_item_2_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/Defend_Button" to="." method="_on_defend_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/Yes_Tutorial" to="." method="_on_yes_tutorial_pressed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/No_Tutorial" to="." method="_on_no_tutorial_pressed"]

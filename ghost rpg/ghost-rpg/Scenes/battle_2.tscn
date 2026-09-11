@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://phgaet7aot5p"]
+
+[ext_resource type="Script" uid="uid://xavypvhrl0m1" path="res://Scripts/Battle_1.gd" id="1_g0mn1"]
+[ext_resource type="Texture2D" uid="uid://c1e28s4g0qjro" path="res://Assets/Background_Main_Menu.png" id="2_k6ju2"]
+[ext_resource type="Texture2D" uid="uid://c4guexcdusja6" path="res://Assets/Ghost Onryo.png" id="3_k6ju2"]
+
+[node name="Battle_2" type="CanvasLayer" unique_id=1478949919]
+script = ExtResource("1_g0mn1")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1451603277]
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 1155.0
+offset_bottom = 647.0
+texture = ExtResource("2_k6ju2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=837349463]
+anchors_preset = -1
+anchor_right = 0.172
+anchor_bottom = 0.864
+offset_left = 8.0
+offset_top = 385.0
+offset_right = 233.85599
+offset_bottom = 92.12799
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=208099334]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=1090346527]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=2141194829]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Attack_1_Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1894607574]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Attack"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1565769390]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Item_1_Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=747404320]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Energy Drink"
+
+[node name="Item_2_Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=2059907869]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Lucky Trinket"
+
+[node name="Defend_Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1466655723]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Defend"
+
+[node name="Health_Bar" type="ProgressBar" parent="HBoxContainer/VBoxContainer" unique_id=1724007436]
+layout_mode = 2
+
+[node name="Damage_Label" type="Label" parent="HBoxContainer" unique_id=758588632]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2043551822]
+offset_left = 754.0
+offset_top = 12.0
+offset_right = 1123.0
+offset_bottom = 88.0
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer" unique_id=597181201]
+position = Vector2(162, 130)
+texture = ExtResource("3_k6ju2")
+
+[node name="Enemy_health_Bar" type="ProgressBar" parent="VBoxContainer" unique_id=774614545]
+layout_mode = 2
+
+[node name="Enemy_Damage_Label" type="Label" parent="VBoxContainer" unique_id=1361924107]
+layout_mode = 2
+
+[node name="Player_Attack_Label" type="Label" parent="." unique_id=1451162487]
+anchors_preset = -1
+anchor_left = 0.293
+anchor_top = 0.59900004
+anchor_right = 0.41300002
+anchor_bottom = 0.634
+offset_left = 0.46398926
+offset_top = -0.15203857
+offset_right = 0.2239685
+offset_bottom = 0.16799927
+
+[node name="Enemy_Attack_Label" type="Label" parent="." unique_id=1833635129]
+anchors_preset = -1
+anchor_left = 0.44000003
+anchor_top = 0.171
+anchor_right = 0.56
+anchor_bottom = 0.20700002
+offset_left = 255.11996
+offset_top = 102.192
+offset_right = 254.88
+offset_bottom = 101.86398
+
+[node name="Curse_Label" type="Label" parent="." unique_id=58143598]
+offset_left = 450.0
+offset_top = 570.0
+offset_right = 508.0
+offset_bottom = 593.0
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Attack_1_Button" to="." method="_on_attack_1_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Item_1_Button" to="." method="_on_item_1_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Item_2_Button" to="." method="_on_item_2_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/Defend_Button" to="." method="_on_defend_button_pressed"]
