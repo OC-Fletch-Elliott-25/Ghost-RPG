@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://e7r8y351fiu1"]
+
+[ext_resource type="Script" uid="uid://dr2svcvitkjyq" path="res://Scripts/Play_Game.gd" id="1_anlgx"]
+[ext_resource type="Texture2D" uid="uid://c1e28s4g0qjro" path="res://Assets/Background_Main_Menu.png" id="2_xvotp"]
+
+[node name="Control" type="Control" unique_id=884419398]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_anlgx")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1159182027]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 638.0
+texture = ExtResource("2_xvotp")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=49585076]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.38000003
+anchor_top = 0.44400004
+anchor_right = 0.62
+anchor_bottom = 0.55600005
+offset_left = 6.2399597
+offset_top = 121.287964
+offset_right = 5.76001
+offset_bottom = 120.711975
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button2" type="Button" parent="HBoxContainer" unique_id=1178412853]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Play"
+
+[node name="Button3" type="Button" parent="HBoxContainer" unique_id=1896108701]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Exit"
+
+[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_exit_pressed"]
