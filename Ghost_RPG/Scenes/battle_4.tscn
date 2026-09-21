@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://b1hqcgfaarnre"]
+
+[ext_resource type="Script" uid="uid://stu56vtlq3ai" path="res://battle_4.gd" id="1_wxm0y"]
+[ext_resource type="Texture2D" uid="uid://nlaytjxuyiq0" path="res://Assets/Background_Battle_4.png" id="2_nurwf"]
+[ext_resource type="Texture2D" uid="uid://d1uyl6s8g7ias" path="res://Assets/Will_O_The_Wisp.png" id="3_sxv52"]
+
+[node name="Battle_4" type="Control" unique_id=519695948]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wxm0y")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1869912233]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 1155.0
+offset_bottom = 647.0
+texture = ExtResource("2_nurwf")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1695107821]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.172
+anchor_bottom = 0.864
+offset_left = 8.0
+offset_top = 385.0
+offset_right = 233.85599
+offset_bottom = 92.12799
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1987596123]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=1979609283]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=125444940]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Attack_1_Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=395742406]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Attack"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1466769699]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Item_1_Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=866049261]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Energy Drink"
+
+[node name="Item_2_Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1373060585]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Lucky Trinket"
+
+[node name="Defend_Button" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=2103448261]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Defend"
+
+[node name="Health_Bar" type="ProgressBar" parent="HBoxContainer/VBoxContainer" unique_id=1723459355]
+layout_mode = 2
+
+[node name="Damage_Label" type="Label" parent="HBoxContainer" unique_id=2085075091]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=128974598]
+layout_mode = 0
+offset_left = 754.0
+offset_top = 12.0
+offset_right = 1123.0
+offset_bottom = 88.0
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer" unique_id=1162295322]
+position = Vector2(162, 130)
+scale = Vector2(3, 3)
+texture = ExtResource("3_sxv52")
+
+[node name="Enemy_health_Bar" type="ProgressBar" parent="VBoxContainer" unique_id=274059331]
+layout_mode = 2
+
+[node name="Enemy_Damage_Label" type="Label" parent="VBoxContainer" unique_id=827225988]
+layout_mode = 2
+
+[node name="Player_Attack_Label" type="Label" parent="." unique_id=1213029737]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.293
+anchor_top = 0.59900004
+anchor_right = 0.41300002
+anchor_bottom = 0.634
+offset_left = 0.46398926
+offset_top = -0.15203857
+offset_right = 0.2239685
+offset_bottom = 0.16799927
+
+[node name="Enemy_Attack_Label" type="Label" parent="." unique_id=1664783560]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.44000003
+anchor_top = 0.171
+anchor_right = 0.56
+anchor_bottom = 0.20700002
+offset_left = 255.11996
+offset_top = 102.192
+offset_right = 254.88
+offset_bottom = 101.86398
+
+[node name="Hide_Label" type="Label" parent="." unique_id=1852788614]
+layout_mode = 0
+offset_left = 993.0
+offset_top = 133.0
+offset_right = 1051.0
+offset_bottom = 156.0
+
+[node name="Info_Label" type="Label" parent="." unique_id=1670060622]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 286.0
+offset_right = 752.0
+offset_bottom = 309.0
+size_flags_vertical = 6
+
+[connection signal="mouse_entered" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Attack_1_Button" to="." method="_on_attack_1_button_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Attack_1_Button" to="." method="_on_attack_1_button_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Attack_1_Button" to="." method="_on_attack_1_button_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Item_1_Button" to="." method="_on_item_1_button_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Item_1_Button" to="." method="_on_item_1_button_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Item_1_Button" to="." method="_on_item_1_button_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Item_2_Button" to="." method="_on_item_2_button_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Item_2_Button" to="." method="_on_item_2_button_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Item_2_Button" to="." method="_on_item_2_button_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/VBoxContainer/HBoxContainer/Defend_Button" to="." method="_on_defend_button_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/VBoxContainer/HBoxContainer/Defend_Button" to="." method="_on_defend_button_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/Defend_Button" to="." method="_on_defend_button_pressed"]
