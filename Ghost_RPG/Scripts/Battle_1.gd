@@ -107,16 +107,22 @@ func player_item_2():
 	$Player_Attack_Label.text = "DAMAGE increased!"
 
 #This function is played when the player presses the "defend" button.
+#This function is played when the player presses the "defend" button.
 func player_defend():
 	#The player's choice is reflected using a label and a timer is induced.
 	$Player_Attack_Label.text = "You Defended!"
 	await get_tree().create_timer(1).timeout
 	#The player's damage coefficient is then reduced by 20%.
 	player_damage_coefficient = player_damage_coefficient * 0.8
+	if player_damage_coefficient < 0.5:
+		player_damage_coefficient = 0.5
+		$Player_Attack_Label.text = "You cannot DEFEND any more!"
+		await get_tree().create_timer(1).timeout
+	else:
+		$Player_Attack_Label.text = "Damage against you decreased!"
+		await get_tree().create_timer(1).timeout
 	#This change is then updated in the player's damage coefficient label.
 	$HBoxContainer/Damage_Label.text = str(player_damage_coefficient)
-	#A label is shown displaying what DEFEND actually does.
-	$Player_Attack_Label.text = "Damage against you decreased!"
 
 #This function is called whenever the player's turn ends for the enemy turn.
 func enemy_turn():
